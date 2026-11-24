@@ -2,7 +2,7 @@
 
 <h1 align="center">Chaeyeon Lee</h1>
 <p align="center"><strong>Data Science · Bioinformatics · Applied AI</strong></p>
-<p align="center"><a href="https://chaeiiii.github.io"><img src="https://img.shields.io/badge/VIEW%20MY%20PORTFOLIO-38536C?style=for-the-badge&logo=githubpages&logoColor=white" alt="View my portfolio"></a></p>
+<p align="center"><a href="https://chaeiiii.github.io/index.html"><img src="https://img.shields.io/badge/VIEW%20MY%20PORTFOLIO-38536C?style=for-the-badge&logo=githubpages&logoColor=white" alt="View my portfolio"></a></p>
 
 ## About Me
 
