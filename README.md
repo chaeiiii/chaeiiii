@@ -41,15 +41,22 @@
 흉부 X-ray 데이터를 활용한 의료영상 분석 프로젝트
 
 ### Epigenomic Analysis of Enhancers
-*Bioinformatics · Undergraduate Thesis*
+*Bioinformatics · Undergraduate Thesis · Molecular Epigenomics Lab*
 
-마우스 배아줄기세포에서 전사인자 결합에 따른 인핸서 특성 분석
+마우스 배아줄기세포의 ATAC-seq, ChIP-seq, GRO-seq 데이터를 통합하여 활성 인핸서를 식별하고, 전사인자 결합에 따른 후성유전체 특성과 전사 활성을 비교 분석했습니다.
 
-- 유전체·후성유전체 및 전사 활성 데이터 처리
-- 전사인자 결합에 따른 인핸서 분류 및 특성 비교
-- 분석 조건 검증 및 생물학적 결과 해석
+**Key Contributions**
 
-**Tech:** Linux · Bowtie2 · MACS2 · BEDTools · deepTools · HOMER
+- Linux 환경에서 시퀀싱 데이터 전처리, mm10 참조 유전체 정렬 및 peak calling 수행
+- ATAC-seq와 H3K27ac ChIP-seq 데이터 통합 및 프로모터 인접 영역 제외를 통해 활성 인핸서 14,910개 식별
+- 유전체 위치, ROSE 기반 인핸서 유형 및 전사인자 결합 조합에 따른 분류
+- 전사인자 결합, 히스톤 변형 및 가닥 특이적 GRO-seq 신호 비교 분석
+- 기존에 알려진 인핸서 영역과 무작위 대조군을 활용한 분석 결과 검토
+- Heatmap, Metaplot 및 UCSC Genome Browser를 활용한 결과 시각화
+
+**Key Findings:** ROSE 분석에서 Super-enhancer 374개와 Typical enhancer 10,028개를 분류했습니다. 네 가지 다능성 관련 전사인자의 동시 결합 비율은 각각 38.2%와 4.4%였으며, 네 인자가 모두 결합한 인핸서에서 높은 양방향 전사 활성을 관찰했습니다. 공개 데이터 기반 연관성 분석으로, 인과관계는 검증하지 않았습니다.
+
+**Tech:** Linux · Bash / Shell · Trim Galore · Bowtie2 · SAMtools · Sambamba · MACS3 · BEDTools · HOMER · deepTools · ROSE · UCSC Genome Browser
 
 ### [ASMR Recommender](https://github.com/chaeiiii/asmr-recommender)
 *Personalization · AI-assisted Development · Personal Project*
@@ -82,7 +89,7 @@
 
 **Bioinformatics**
 
-`Bowtie2` · `SAMtools` · `BEDTools` · `MACS2` · `deepTools` · `HOMER` · `ROSE` · `IGV`
+`Trim Galore` · `Bowtie2` · `SAMtools` · `Sambamba` · `MACS3` · `BEDTools` · `deepTools` · `HOMER` · `ROSE` · `IGV` · `UCSC Genome Browser`
 
 **Application Development**
 
