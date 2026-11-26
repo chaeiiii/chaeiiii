@@ -27,20 +27,38 @@
 **Tech:** Python · Pandas · NumPy · scikit-survival · Scikit-learn · Streamlit
 
 ### HeartLink
-*Medical AI · Team Project · In Progress*
+*Medical AI · Data Science · Generative AI · Team Project · In Progress*
 
-심부전 환자의 퇴원 후 30일 재입원 위험을 예측하고 의료진의 퇴원 관리 및 환자 교육을 지원하는 시스템입니다.
+심부전 환자의 퇴원 후 30일 재입원 위험을 예측하고, 환자별 위험요인과 진료지침을 활용하여 의료진의 퇴원 관리 및 환자 교육을 지원하는 시스템입니다.
 
-**My Contributions**
+**My Role:** 초기 프로젝트 기획, 임상데이터 구축 및 머신러닝 실험에 참여했으며, 11월 9일 이후 진료지침 기반 RAG·LLM 및 관리 계획 API 개발을 전담하고 있습니다. 최종 예측 모델과 SHAP 기반 위험요인 분석, 사용자 화면 및 데이터베이스는 다른 팀원들이 담당합니다.
 
-- MIMIC-IV 임상 검사 및 약물 데이터 추출, 변수 정의와 결측률 검토
-- 퇴원 이후 정보가 예측에 포함되지 않도록 데이터 추출 기준 검토
-- 심부전 진료지침을 검색 가능한 단위로 구성하고 관련 근거 검색 및 재정렬 기능 구현
-- 검색 근거를 활용한 대규모 언어 모델(LLM) 기반 관리 계획 생성 및 출력 검토
+**Clinical Data Analysis & Preprocessing**
 
-**Current Status:** 팀 분석 대상은 환자 4,949명, 기준 입원 8,077건입니다. 개인 담당 영역은 진료지침 검색 및 생성형 AI 기반 관리 계획과 교육 초안 개발입니다. 교육용 프로토타입으로 실제 임상 적용 및 최종 검증은 완료되지 않았습니다.
+- 심부전 재입원 관련 선행연구 조사 및 분석 대상·예측 기준 검토
+- MIMIC-IV 기반 환자 4,949명, 입원 8,077건의 팀 데이터 구축 참여
+- SQL 기반 혈액검사 11개 항목의 최초·최종값(22개 변수) 및 약물 7개 군의 처방 여부 변수 구축
+- 검사 시간 조건 개선, 누락 검사값 복구, 결측률·중복·입원 단위 데이터 정합성 검증
+- 비정형 임상 기록과 기존 코호트의 연계 가능성 분석
 
-**Tech:** Python · SQL · FAISS · Hugging Face · Ollama
+**Machine Learning & Evaluation**
+
+- 환자 단위 데이터 분할 및 데이터 누수 방지 기준 검토
+- TabPFN 모델의 앙상블 설정 변경 실험 및 AUROC, AUPRC, Brier Score 비교를 통한 기존 설정 유지 판단
+
+**RAG & LLM Development — Main Role**
+
+- 국내외 심부전 진료지침 조사 및 검색 목적에 맞춘 문서 구조화
+- 문서 청킹, 임베딩, FAISS 벡터 검색 및 관련도 재정렬(리랭킹) 구현과 검색 성능 비교
+- 환자 정보 및 예측 위험요인을 검색 근거와 함께 대규모 언어 모델(LLM)에 전달하는 입력 구조 설계
+- 진료지침에 근거한 의료진용 관리 계획 초안 생성 및 근거 출처 연결
+- 환자별 퇴원 교육 항목과 생성 조건 설계, 확정된 퇴원 지침을 반영하는 교육 초안 개발
+- 근거 없는 의료정보 및 임의 처방 지시를 제한하는 프롬프트와 출력 검증 규칙 설계
+- 생성 결과 검증 및 특정 누락 정보 자동 보완 모듈 개발
+
+**In Progress:** FastAPI 기반 관리 계획 API, 환자 교육용 근거 검색 고도화 및 팀 시스템 연동·최종 검증을 담당하고 있습니다. 교육용 프로토타입으로 실제 임상 적용이나 임상적 유효성 검증은 수행하지 않았습니다.
+
+**Tech:** Python · SQL · Pandas · PostgreSQL · DBeaver · TabPFN · Sentence Transformers · Hugging Face · FAISS · Ollama · FastAPI · Linux
 
 ### Epigenomic Analysis of Enhancers
 *Bioinformatics · Undergraduate Thesis · Molecular Epigenomics Lab*
